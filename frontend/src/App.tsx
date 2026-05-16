@@ -1,3 +1,4 @@
+import WritingAssistantComponent from "./components/writing-assistant/writing_assistant.component";
 import { JSX } from "react";
 import {
   BrowserRouter as Router,
@@ -66,7 +67,22 @@ function App() {
             </RootLayout>
           }
         />
-
+<Route
+  path="/templates"
+  element={
+    <RootLayout>
+      <TemplatesComponent />
+    </RootLayout>
+  }
+/>
+<Route
+  path="/writing-assistant"
+  element={
+    <RootLayout>
+      <WritingAssistantComponent />
+    </RootLayout>
+  }
+/>
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<DashboardComponent />} />
           <Route
